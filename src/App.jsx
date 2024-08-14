@@ -1,13 +1,22 @@
 import "./App.css";
+import {
+  MainContainer,
+  HeroSection,
+  StaffSection,
+  Carousel,
+} from "./components";
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Started Template Project</h1>
-      </div>
+      <MainContainer>
+        <HeroSection />
+        <StaffSection>
+          <Carousel /> 
+        </StaffSection>
+      </MainContainer>
     </>
   );
 }
-
+// TODO: Criar o card do carousel e estilizar
 export default App;

@@ -2,15 +2,23 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
+
+  --bg-dark-theme: #242424;
+  --color-dark-theme: rgba(255, 255, 255, 0.87);
+
+  --bg-light-theme: #ffffff;
+  --color-light-theme: #213547;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-dark-theme);
+  background-color: var(--bg-dark-theme);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 * {
@@ -28,9 +36,9 @@ body {
 }
 
 /* switch to light theme based on OS prefers*/
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--color-light);
+    background-color: var(--bg-light-theme);
   }
 }
