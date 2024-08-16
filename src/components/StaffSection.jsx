@@ -8,7 +8,8 @@ const StyledStaffSection = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-block: 4rem; /* ajustar após criar os items de preenchimento */
+  padding-block: 4rem;
+  overflow-x: hidden;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.textColor};
 `;

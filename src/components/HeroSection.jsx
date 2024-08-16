@@ -33,13 +33,12 @@ const StyledDiv = styled.div`
   /* gap: 25px; */
   background-image: ${(props) => props.theme.filter};
   color: ${(props) => props.theme.textColor};
-  position: relative;
 
   & h1 {
     padding-block: 0.5rem;
     font-size: 4rem;
-    color: #faa627f9;
-    text-shadow: 1px 1px 8px #35322ff8;
+    color: ${(props) => props.theme.heroH1Color};
+    text-shadow: ${(props) => props.theme.heroH1TextShadow};
   }
 
   @media (max-width: 1366px) {
@@ -58,8 +57,8 @@ const StyledDiv = styled.div`
 `;
 
 const PositionedButton = styled(ToggleThemeButton)`
-  position: absolute;
-  top: 25%;
+  position: fixed;
+  top: 24%;
   right: 20px;
 `;
 

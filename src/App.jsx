@@ -1,4 +1,3 @@
-import "./App.css";
 import {
   MainContainer,
   HeroSection,
@@ -6,15 +5,16 @@ import {
   Carousel,
 } from "./components";
 
+
 function App() {
   return (
     <>
       <MainContainer>
         <HeroSection />
-        <StaffSection>
-          <Carousel /> 
-        </StaffSection>
       </MainContainer>
+      <StaffSection>
+        <Carousel />
+      </StaffSection>
     </>
   );
 }
