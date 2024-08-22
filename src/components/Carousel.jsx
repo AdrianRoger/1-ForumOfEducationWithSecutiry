@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import {
-  Pagination,
   Autoplay,
   EffectCoverflow,
   Navigation,
-} from "swiper/modules";
+} from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
 
 // Estilos para o Carousel
 const Container = styled.div`
-  max-width: 90%;
-  padding: 4rem 1rem;
+  width: 100%;
+  padding: 2rem 0;
   margin: 0 auto;
   background-color: ${(props) => props.theme.bgColor};
 `;
@@ -145,12 +146,13 @@ const StyledCard = styled.div`
   color: ${(props) => props.theme.textColor};
   border: 1.5px solid ${(props) => props.theme.textColor};
   padding: 0.5rem 0.5rem 0 0.5rem;
+  z-index: 10;
 
-  &:last-child {
+  & .card-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     & p {
@@ -192,7 +194,6 @@ const Carousel = () => {
     <Container>
       <SwiperContainer
         effect={"coverflow"}
-        spaceBetween={-80}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
@@ -200,8 +201,9 @@ const Carousel = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 200,
+          depth: 100,
           modifier: 2.5,
+          slideShadows: false,
         }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         navigation={{
@@ -209,8 +211,8 @@ const Carousel = () => {
           prevEl: ".swiper-button-prev",
           clickable: true,
         }}
-        autoplay={true}
-        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+        // autoplay={true}
+        modules={[EffectCoverflow, Navigation, Autoplay]}
       >
         {data.map((data, i) => (
           <SwiperSlideStyled key={i}>
@@ -221,7 +223,7 @@ const Carousel = () => {
                   alt={data.name + ". " + data.profession}
                 />
               </StyledImgContainer>
-              <div>
+              <div className="card-content">
                 <p>{data.profession}</p>
                 <h3>{data.name}</h3>
               </div>
