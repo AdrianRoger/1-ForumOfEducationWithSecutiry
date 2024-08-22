@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import heroImage from "../assets/img/hero_fullSize.png";
-import ToggleThemeButton from './ToggleThemeButton';
 
 const StyledHeroSection = styled.section`
   width: 100%;
@@ -12,7 +11,7 @@ const StyledHeroSection = styled.section`
 
   @container main (max-width: 1023px) {
     height: 90vh;
-    background-position: center calc(0% - 80px);
+    background-position: center calc(0% - 20px);
   }
 
   @container main (min-width: 1024px) {
@@ -20,8 +19,12 @@ const StyledHeroSection = styled.section`
     background-position: center calc(0% - 80px);
   }
 
-  @media (max-width: 320px) {
-    background-position: calc(50% - 70px) top;
+  @media (max-width: 768px) {
+    background-position: center calc(0% - 20px);
+  }
+
+  @media (max-width: 480px) {
+    background-position: calc(50% - 85px) calc(0% - 20px);
   }
 `;
 
@@ -29,45 +32,47 @@ const StyledDiv = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  place-items: center start;
-  /* gap: 25px; */
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2rem;
+  gap: 25px;
   background-image: ${(props) => props.theme.filter};
   color: ${(props) => props.theme.textColor};
+  position: relative;
 
-  & h1 {
+  & .hero-title {
     padding-block: 0.5rem;
     font-size: 4rem;
     color: ${(props) => props.theme.heroH1Color};
     text-shadow: ${(props) => props.theme.heroH1TextShadow};
   }
 
-  @media (max-width: 1366px) {
-    & h1 {
-      font-size: 2rem;
-      text-align: center;
-    }
+  & .effect-phrase {
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    text-shadow: ${(props) => props.theme.heroH1TextShadow};
+    background-color: ${(props => props.theme.effectBgColor)};
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
   }
 
   @media (max-width: 768px) {
-    & h1 {
-      font-size: 1.5rem;
+    & .hero-title {
+      font-size: 2.5rem;
       text-align: center;
     }
   }
-`;
-
-const PositionedButton = styled(ToggleThemeButton)`
-  position: fixed;
-  top: 24%;
-  right: 20px;
 `;
 
 const HeroSection = () => {
   return (
     <StyledHeroSection>
       <StyledDiv>
-        <h1>1º FÓRUM DE EDUCAÇÃO COM SEGURANÇA</h1>
-        <PositionedButton />
+        <h1 className="hero-title">1º FÓRUM DE EDUCAÇÃO COM SEGURANÇA</h1>
+        <h1 className="effect-phrase">
+          &ldquo;CONSTRUINDO UM AMBIENTE ESCOLAR MAIS SEGURO&rdquo;
+        </h1>
       </StyledDiv>
     </StyledHeroSection>
   );
