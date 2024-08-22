@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   border-radius: 50%;
   width: 30px;
   aspect-ratio: 1/1;
-  /* position: relative; */
+  position: relative;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 
