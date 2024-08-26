@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import {
-  Autoplay,
-  EffectCoverflow,
-  Navigation,
-} from "swiper";
+import { Autoplay, EffectCoverflow, Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
 
 // Estilos para o Carousel
 const Container = styled.div`
@@ -168,12 +164,13 @@ const StyledCard = styled.div`
 
 const StyledImgContainer = styled.div`
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4/5;
   border: 1.5px solid ${(props) => props.theme.textColor};
   overflow: hidden;
 
   & img {
     width: 100%;
+    max-width: 100%;
     object-fit: cover;
     background-color: ${(props) => props.theme.bgColor};
   }
@@ -216,7 +213,7 @@ const Carousel = () => {
       >
         {data.map((data, i) => (
           <SwiperSlideStyled key={i}>
-          <StyledCard>
+            <StyledCard>
               <StyledImgContainer>
                 <img
                   src={data.photo}
