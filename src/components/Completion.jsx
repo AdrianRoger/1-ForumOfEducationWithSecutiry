@@ -8,11 +8,15 @@ const CompletionSection = styled.section`
   color: #ffffffdd;
   text-align: center;
 
-  & h1 {
+  & .title {
     padding: 0.5rem 0 2rem 0;
     font-size: 4rem;
     color: ${(props) => props.theme.heroH1Color};
     text-shadow: ${(props) => props.theme.heroH1TextShadow};
+  }
+
+  & .subtitle {
+    display: none;
   }
 
   & .completion {
@@ -62,6 +66,11 @@ const CompletionSection = styled.section`
         }
       }
 
+      & .subtitle {
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
       & .suport {
         display: flex;
         flex-wrap: wrap;
@@ -101,12 +110,13 @@ const Completion = () => {
 
   return (
     <CompletionSection>
-      <h1>Realização</h1>
+      <h1 className="title">Realização</h1>
       <div className="completion">
         <div className="principal">
           <img src="images/logos/iecb.png" alt="Brasão IECB Internacional" />
           <p>Instituição de utilidade pública e interesse social </p>
         </div>
+        <h1 className="subtitle">APOIO</h1>
         <div className="suport">
           {data.map((d, i) => {
             return (
