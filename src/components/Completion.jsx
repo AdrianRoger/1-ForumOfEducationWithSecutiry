@@ -56,7 +56,7 @@ const CompletionSection = styled.section`
       gap: 5px;
 
       & .principal {
-        width: 80%;
+        width: 80%; 
         font-size: 2rem;
         margin-bottom: 1.5rem;
 
