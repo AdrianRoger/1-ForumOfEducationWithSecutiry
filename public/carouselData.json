@@ -1,33 +1,27 @@
 [
-    {
-      "name": "Maria Yvelonia",
-      "profession": "Professora e Ex-Secretária Nacional de assistência Social",
-      "photo": "images/maria_yvelonia.png"
-    },
-    {
-      "name": "Gustavo Araujo",
-      "profession": "Economista - Jornalista e Presidente do Grupo Gustavo Araújo",
-      "photo": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=320,fit=crop/dJoNMwnK7eskkaj5/gustavo-Y4Lpz0Z3KGflX86G.jpg"
-    },
-    {
-      "name": "Adriana Vieira",
-      "profession": "Psicóloga - Neuropsicologia CPR 01/21759",
-      "photo": "images/adriana_vieira_2.png"
-    },
-    {
-      "name": "Victor Viana",
-      "profession": "CMT de Aeronave - Palestrante de Projetos Cívico-Militar.",
-      "photo": "images/victor_viana.png"
-    },
-    {
-      "name": "Paulo Neves",
-      "profession": "Escritor - Teologo e Ex - Secretario de Segurança Pública e Trânsito - Ex - Integrante do BOPE e BAVOP/PMDF",
-      "photo": "images/paulo_neves.png"
-    },
-    {
-      "name": "Edinam Braúna",
-      "profession": "Secretário Municipal de Segurança Pública de Luziânia - GO",
-      "photo": "images/edinam_brauna_nobg.png"
-    }
-  ]
-  
+  {
+    "name": "Maria Yvelonia",
+    "profession": "Professora e Ex-Secretária Nacional de assistência Social",
+    "photo": "images/maria_yvelonia.png"
+  },
+  {
+    "name": "Gustavo Araujo",
+    "profession": "Economista - Jornalista e Presidente do Grupo Gustavo Araújo",
+    "photo": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=320,fit=crop/dJoNMwnK7eskkaj5/gustavo-Y4Lpz0Z3KGflX86G.jpg"
+  },
+  {
+    "name": "Victor Viana",
+    "profession": "CMT de Aeronave - Palestrante de Projetos Cívico-Militar.",
+    "photo": "images/victor_viana.png"
+  },
+  {
+    "name": "Paulo Neves",
+    "profession": "Escritor - Teologo e Ex - Secretario de Segurança Pública e Trânsito - Ex - Integrante do BOPE e BAVOP/PMDF",
+    "photo": "images/paulo_neves.png"
+  },
+  {
+    "name": "Edinam Braúna",
+    "profession": "Secretário Municipal de Segurança Pública de Luziânia - GO",
+    "photo": "images/edinam_brauna_nobg.png"
+  }
+]

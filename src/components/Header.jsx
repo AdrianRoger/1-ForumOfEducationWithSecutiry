@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ToggleThemeButton from "./ToggleThemeButton";
-import SubscribeModal from "./SubcribeModal";
+// import SubscribeModal from "./SubcribeModal";
 // import { useState } from "react";
 
 const StyledHeader = styled.header`
