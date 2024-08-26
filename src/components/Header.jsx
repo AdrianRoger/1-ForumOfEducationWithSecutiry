@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ToggleThemeButton from "./ToggleThemeButton";
 import SubscribeModal from "./SubcribeModal";
-import { useState } from "react";
+// import { useState } from "react";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -17,21 +17,21 @@ const StyledMenu = styled.div`
   height: fit-content;
 `;
 
-const StyledSubscribeButton = styled.button`
-  border: none;
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background-color: transparent;
-  color: #ffffffdd;
-  cursor: pointer;
+// const StyledSubscribeButton = styled.button`
+//   border: none;
+//   margin: 0 1rem;
+//   padding: 0.5rem 1rem;
+//   border-radius: 0.5rem;
+//   background-color: transparent;
+//   color: #ffffffdd;
+//   cursor: pointer;
 
-  &:hover {
-    background-color: #faa627f9;
-    text-shadow: 1px 1px 3px black;
-    color: ${(props) => props.theme.textColorInverted};
-  }
-`;
+//   &:hover {
+//     background-color: #faa627f9;
+//     text-shadow: 1px 1px 3px black;
+//     color: ${(props) => props.theme.textColorInverted};
+//   }
+// `;
 
 const StyledIecbLogo = styled.div`
   width: 40px;
@@ -47,28 +47,28 @@ const StyledIecbLogo = styled.div`
 `;
 
 const Header = () => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  // const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const openModal = () => {
-    setIsOpenModal(true);
-  };
+  // const openModal = () => {
+  //   setIsOpenModal(true);
+  // };
 
-  const closeModal = () => {
-    setIsOpenModal(false);
-  };
+  // const closeModal = () => {
+  //   setIsOpenModal(false);
+  // };
 
   return (
     <>
-      {isOpenModal && <SubscribeModal closeModal={closeModal} />}
+      {/* {isOpenModal && <SubscribeModal closeModal={closeModal} />} */}
       <StyledHeader>
         <StyledIecbLogo>
           <img src="images/logos/iecb.png" alt="Brasão IECB Internacional" />
           <span>IECB</span>
         </StyledIecbLogo>
         <StyledMenu>
-          <StyledSubscribeButton onClick={openModal}>
+          {/* <StyledSubscribeButton onClick={openModal}>
             Inscreva-se
-          </StyledSubscribeButton>
+          </StyledSubscribeButton> */}
           <ToggleThemeButton />
         </StyledMenu>
       </StyledHeader>
